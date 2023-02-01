@@ -6,9 +6,9 @@ inputs:
     description: 'Who to get'
     required: true
     default: Mubasher
-  outputs:
-    time:
-      description: 'Greeting from first action'
-  runs:
-    using: 'node12'
-    main: 'dist/index.js'
+outputs:
+  time:
+    description: 'Greeting from first action'
+runs:
+  using: "node12"
+  main: "dist/index.js"
