@@ -11,4 +11,4 @@ inputs:
       description: 'Greeting from first action'
   runs:
     using: 'node12'
-    main: 'index.js'
+    main: 'dist/index.js'
