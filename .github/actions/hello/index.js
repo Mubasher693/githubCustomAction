@@ -3,8 +3,8 @@ const github = require('@actions/github');
 
 try {
     //Get input
-    const name = core.getInput('who-to-greet');
-    console.log('Hello ${name}')
+    const name = core.getInput("who-to-greet");
+    console.log(`Hello ${name}`)
 
     // post output
     const time = new Date();
