@@ -1,0 +1,17 @@
+name: Hello World
+author: Mubasher iqbal
+description: Test action just to take an input and then give output.
+inputs:
+  who-to-greet:
+    description: 'Who to get'
+    required: true
+    default: Mubasher
+outputs:
+  time:
+    description: 'Greeting from first action'
+runs:
+  using: "docker"
+  image: "Dockerfile"
+#  entrypoint:
+  args:
+    - ${{ inputs.who-to-greet }}

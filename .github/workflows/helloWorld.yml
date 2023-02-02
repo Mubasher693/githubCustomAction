@@ -4,7 +4,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.3.0
-      - uses: ./.github/actions/hello
+      # For javascript
+      # - uses: ./.github/actions/hello
+      # For docker
+      - uses: ./.github/actions/hello-docker
         id: hello
         with:
           who-to-greet: "World"
