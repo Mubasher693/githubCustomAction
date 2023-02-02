@@ -9778,16 +9778,25 @@ const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
 
 try {
+    /*core.debug('Need to enable github debug key before uncommenting.');
+    core.warning('Warning message.');
+    core.error('Error message.');*/
+
     //Get input
-    const name = core.getInput('who-to-greet');
-    console.log('Hello ${name}')
+    const name = core.getInput("who-to-greet");
+    console.log(`Hello ${name}`);
 
     // post output
     const time = new Date();
     core.setOutput('time', time.toTimeString());
 
-    // Check the output of github.
-    console.log(JSON.stringify(github, null, '/t'));
+    // Check the context of out action.
+    core.startGroup('Logging github object');
+    console.log(JSON.stringify(github, null, "\t"));
+    core.endGroup();
+
+    core.exportVariable('HELLO', 'hello');
+
 } catch (e){
     core.setFailed(e.message);
 }
